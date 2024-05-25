@@ -19,7 +19,7 @@ export const Work = () => {
                 <div className="rounded-md overflow-hidden shadow-md">
                     <YouTubeEmbed videoid="_4TPM6clQjM" />
                 </div>
-        </div>
+            </div>
         </Section >
     )
 }

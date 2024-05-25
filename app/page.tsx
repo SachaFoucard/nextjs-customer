@@ -5,6 +5,7 @@ import { Footer } from "./_landing/Footer";
 import Hero from "./_landing/Hero";
 import { Showcase } from "./_landing/Showcase";
 import { Work } from "./_landing/Work";
+import Plans from './blog/Plans'
 
 export default function Home() {
   return (
@@ -21,10 +22,10 @@ export default function Home() {
             }}
           />
         </div>
-      
       <Hero />
       <Work/>
       <Showcase/>
+      <Plans/>
       <Footer/>
     </main>
   );

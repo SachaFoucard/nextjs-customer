@@ -15,9 +15,9 @@ export default function Hero() {
                 <Code className='whitespace-nowrap'>  <CustomeIcon className='inline mr-0.5' name='video' size={16} />video editing</Code>.
             </p>
             <div className='mt-4 lg:mt-6 flex items-center flex-wrap gap-4'>
-                <Button size="lg" className='w-fit mt-5'>Schedul a call</Button>
+                <Button size="lg" className='w-fit mt-5'>Contact me</Button>
                 <Button variant="ghost" size="lg" className='w-fit mt-5'>
-                    <CustomeIcon size={16} name='twitter' className='mr-3' />@Ana_tutu</Button>
+                    <CustomeIcon size={16} name='instagram' className='mr-3' />@Sachafff</Button>
             </div>
         </Section>
     )
