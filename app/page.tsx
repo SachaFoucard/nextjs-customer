@@ -9,7 +9,7 @@ import Plans from './blog/Plans'
 
 export default function Home() {
   return (
-    <main className="h-fulls relative">
+    <main className="h-full relative">
       <div
           className=" absolute bg-gradient-to-tr from-[#55a96d] to-[#40a172] opacity-30  inset-x-0  -z-10 transform-gpu overflow-hidden blur-3xl "
           aria-hidden="true"
