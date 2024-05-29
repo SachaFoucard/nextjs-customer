@@ -2,7 +2,7 @@
 
 import { Fragment } from 'react'
 import Link from 'next/link'
-
+import Image from 'next/image';
 import {
   Disclosure,
   DisclosureButton,
@@ -14,7 +14,6 @@ import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const navigation = [
   { name: 'Team', href: '/', current: false },
-  { name: 'Blog', href: '/blog', current: false },
   { name: 'Contact me', href: '/contact', current: false },
 ]
 
@@ -32,7 +31,7 @@ export default function NavBar() {
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
                 <DisclosureButton className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
-                  <span className="absolute -inset-0.5" /> 
+                  <span className="absolute -inset-0.5" />
                   <span className="sr-only">Open main menu</span>
                   {open ? (
                     <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
@@ -43,10 +42,12 @@ export default function NavBar() {
               </div>
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
-                  <img
+                  <Image
                     className="h-8 w-auto"
                     src="/logo.png"
                     alt="Your Company"
+                    width={100}
+                    height={100}
                   />
                 </div>
                 <div className="hidden sm:ml-6 sm:block">
@@ -76,17 +77,17 @@ export default function NavBar() {
                   <span className="sr-only">View notifications</span>
                   <BellIcon className="h-6 w-6" aria-hidden="true" />
                 </button>
-
-                {/* Profile dropdown */}
                 <Menu as="div" className="relative ml-3">
                   <div>
                     <MenuButton className="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                       <span className="absolute -inset-1.5" />
                       <span className="sr-only">Open user menu</span>
-                      <img
+                      <Image
                         className="h-8 w-8 rounded-full"
-                        src="https://foucardsachaa.netlify.app/logosacha.png"
-                        alt=""
+                        src="https://i.ibb.co/whx01MM/logosacha.png"
+                        alt="pp"
+                        width={100}
+                        height={100}
                       />
                     </MenuButton>
                   </div>

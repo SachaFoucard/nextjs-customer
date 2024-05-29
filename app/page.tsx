@@ -1,12 +1,12 @@
 
 "use client"
 
+import Comments from "./_landing/Comments";
 import { Footer } from "./_landing/Footer";
 import Hero from "./_landing/Hero";
 import { Showcase } from "./_landing/Showcase";
 import { Work } from "./_landing/Work";
-import Plans from './blog/Plans'
-
+import Plans from './_landing/Plans';
 export default function Home() {
   return (
     <main className="h-full relative">
@@ -26,6 +26,7 @@ export default function Home() {
       <Work/>
       <Showcase/>
       <Plans/>
+      <Comments/>
       <Footer/>
     </main>
   );

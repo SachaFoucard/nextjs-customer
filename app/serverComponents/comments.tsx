@@ -8,7 +8,6 @@ interface HomePageProps {
 export default function HomePage({ items }: HomePageProps) {
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-2xl mb-4">Server-Side Rendered Marquee</h1>
       <Marquee className="bg-gray-200" pauseOnHover={true} repeat={3}>
         {items.map((item, index) => (
           <div key={index} className="p-2">

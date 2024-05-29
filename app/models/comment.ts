@@ -15,6 +15,10 @@ const commentsSchema = new Schema({
         trim: true,
         required: true
     },
+    img:{
+        type: String,
+        required: true
+    }
 });
 
 const CommentModel = mongoose.models.comments || mongoose.model('comments', commentsSchema);
