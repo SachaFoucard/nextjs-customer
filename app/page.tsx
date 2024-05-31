@@ -8,7 +8,6 @@ import Hero from "./_landing/Hero";
 import { Showcase } from "./_landing/Showcase";
 import { Work } from "./_landing/Work";
 import Plans from './_landing/Plans';
-import { Section } from "./_landing/Section";
 import Send from "./_landing/SendForm";
 
 export default function Home() {
@@ -26,7 +25,7 @@ export default function Home() {
           }}
         />
       </div>
-      <div className=" md:py-20 sm:mt-40 sm:mr-20  sm:flex-col-1">
+      <div className="md:flex md:mr-20 md:mt-20 mx-20">
         <Hero />
         <Send />
       </div>

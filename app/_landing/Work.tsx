@@ -1,10 +1,11 @@
-import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel"; // Adjust the import path as needed
+import { Carousel, CarouselContent, CarouselItem } from "../components/ui/carousel"; // Adjust the import path as needed
 import { Section } from "./Section";
 import { Key, useState } from "react";
 import { Interface } from "readline";
+import Image from 'next/image'
 
 interface Project {
-    img: string
+    img: string | undefined | 
 }
 
 export const Work = () => {
@@ -57,7 +58,7 @@ export const Work = () => {
                             <CarouselItem key={index} className="pl-1 md:basis-1/2 lg:basis-1/3">
                                 <div className="p-1">
                                     <div className="rounded-md overflow-hidden shadow-md">
-                                        <img src={project.img} width={300} height={100} alt="photo" />
+                                        <Image src={project.img} width={300} height={100} alt="photo" />
                                     </div>
                                 </div>
                             </CarouselItem>

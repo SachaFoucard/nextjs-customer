@@ -1,6 +1,6 @@
 import React from 'react';
 import { SectionPrice } from '../_landing/Section';
-import { Button } from '@/components/ui/button';
+import { Button } from '../components/ui/button';
 
 export default function Plans() {
     // Array of plan objects

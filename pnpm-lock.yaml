@@ -10,8 +10,8 @@ specifiers:
   '@radix-ui/react-label': ^2.0.2
   '@radix-ui/react-slot': ^1.0.2
   '@types/node': ^20
-  '@types/react': ^18
-  '@types/react-dom': ^18
+  '@types/react': ^18.3.3
+  '@types/react-dom': ^18.3.0
   class-variance-authority: ^0.7.0
   clsx: ^2.1.1
   embla-carousel-react: ^8.1.3
@@ -23,6 +23,7 @@ specifiers:
   mongoose: ^8.4.0
   next: 14.2.3
   next-themes: ^0.3.0
+  nodemailer: ^6.9.13
   postcss: ^8
   react: ^18
   react-dom: ^18
@@ -51,6 +52,7 @@ dependencies:
   mongoose: 8.4.0
   next: 14.2.3_nnrd3gsncyragczmpvfhocinkq
   next-themes: 0.3.0_nnrd3gsncyragczmpvfhocinkq
+  nodemailer: 6.9.13
   react: 18.3.1
   react-dom: 18.3.1_react@18.3.1
   react-hook-form: 7.51.5_react@18.3.1
@@ -2407,6 +2409,11 @@ packages:
     transitivePeerDependencies:
       - '@babel/core'
       - babel-plugin-macros
+    dev: false
+
+  /nodemailer/6.9.13:
+    resolution: {integrity: sha512-7o38Yogx6krdoBf3jCAqnIN4oSQFx+fMa0I7dK1D+me9kBxx12D+/33wSb+fhOCtIxvYJ+4x4IMEhmhCKfAiOA==}
+    engines: {node: '>=6.0.0'}
     dev: false
 
   /normalize-path/3.0.0:

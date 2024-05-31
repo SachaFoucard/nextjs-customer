@@ -1,6 +1,7 @@
 import React, { PropsWithChildren } from 'react'
 import { Section } from './Section'
-import { Button } from '@/components/ui/button'
+import { Button } from '../components/ui/button';
+
 import { CustomeIcon } from './icons/CustomeIcon'
 import Link from 'next/link'
 

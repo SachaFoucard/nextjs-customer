@@ -1,10 +1,11 @@
 // ClientSideMarquee.tsx
 'use client'
 import { Component, useEffect, useState } from "react";
-import Marquee from "../../components/ui/marquee";
-import { cn } from "@/lib/utils";
+import Marquee from "../components/ui/marquee";
 import { Avatar, AvatarImage } from "@radix-ui/react-avatar";
 import { Star } from 'lucide-react';
+import { cn } from "../lib/utils";
+
 
 interface IMarquee {
   _id: string;
@@ -65,6 +66,7 @@ export const ReviewCard = ({
     </figure>
   );
 };
+
 
 export default function ClientSideMarquee() {
 
