@@ -1,4 +1,3 @@
-import { NextApiRequest, NextApiResponse } from "next";
 import CommentModel from "../../models/comment";
 import { connectToMongo } from '../../utils/db';
 

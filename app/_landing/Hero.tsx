@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 export default function Hero() {
     return (
-        <Section className='flex flex-col gap-2 lg:gap-4 absol'>
+        <Section className='flex flex-col gap-2 lg:gap-4 '>
             <h1 className='text-3xl lg:text-5xl font-bold'>Hey I'm Sacha 👋</h1>
             <p className='text-lg leading-9 text-muted-foreground'>I help {" "}
                 <Code>

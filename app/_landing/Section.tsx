@@ -6,7 +6,7 @@ export type SectionProps = PropsWithChildren<{
 }>;
 
 export const Section = (props: SectionProps) => {
-    return <section className={cn(" md:my-20 lg:my-20 max-w-3xl px-6 m-auto lg:px-4", props.className,'my-16')}>{props.children}</section>
+    return <section className={cn(" md:my-20 lg:my-20 max-w-7xl px-6 m-auto lg:px-4", props.className,'my-16')}>{props.children}</section>
 }
 
 export const SectionCarousel  = (props: SectionProps) => {

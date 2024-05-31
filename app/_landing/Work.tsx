@@ -50,14 +50,14 @@ export const Work = () => {
 
     const ProjectCarousel = ({ projects }:any) => {
         return (
-            <div className="grid mt-4 lg:mt-6 gap-2 pt-10 lg:gap-4">
+            <div className="grid mt-4 lg:mt-6 gap-2 pt-10 lg:gap-4 ">
                 <Carousel>
                     <CarouselContent className="-m-1">
                         {projects.map((project: { img: string | undefined; }, index: Key | null | undefined) => (
                             <CarouselItem key={index} className="pl-1 md:basis-1/2 lg:basis-1/3">
                                 <div className="p-1">
                                     <div className="rounded-md overflow-hidden shadow-md">
-                                        <img src={project.img} width={300} height={100} alt={`Project ${index}`} />
+                                        <img src={project.img} width={300} height={100} alt="photo" />
                                     </div>
                                 </div>
                             </CarouselItem>
