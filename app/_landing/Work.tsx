@@ -1,16 +1,15 @@
 import { Carousel, CarouselContent, CarouselItem } from "../components/ui/carousel"; // Adjust the import path as needed
 import { Section } from "./Section";
-import { Key, useState } from "react";
-import { Interface } from "readline";
+import { useState } from "react";
 import Image from 'next/image'
 
 interface Project {
-    img: string | undefined | 
+    img: string | undefined 
 }
 
 export const Work = () => {
     const [projects, setProjects] = useState<Project[]>([
-        { img: './clodio/clodio.png' },
+        { img: '../public/clodio/clodio.png' },
         { img: './clodio/clodio2.png' },
         { img: './clodio/clodio3.png' },
         { img: './clodio/clodio4.png' },
@@ -49,33 +48,32 @@ export const Work = () => {
    
     ]);
 
-    const ProjectCarousel = ({ projects }:any) => {
+    const ProjectCarousel = ({ projects }: { projects: Project[] }) => {
         return (
-            <div className="grid mt-4 lg:mt-6 gap-2 pt-10 lg:gap-4 ">
-                <Carousel>
-                    <CarouselContent className="-m-1">
-                        {projects.map((project: { img: string | undefined; }, index: Key | null | undefined) => (
-                            <CarouselItem key={index} className="pl-1 md:basis-1/2 lg:basis-1/3">
-                                <div className="p-1">
-                                    <div className="rounded-md overflow-hidden shadow-md">
-                                        <Image src={project.img} width={300} height={100} alt="photo" />
-                                    </div>
-                                </div>
-                            </CarouselItem>
-                        ))}
-                    </CarouselContent>
-                </Carousel>
-            </div>
+          <div className="grid mt-4 lg:mt-6 gap-2 pt-10 lg:gap-4 ">
+            <Carousel>
+              <CarouselContent className="-m-1">
+                {projects.map((project: Project, index: number) => (
+                  <CarouselItem key={index} className="pl-1 md:basis-1/2 lg:basis-1/3">
+                    <div className="p-1">
+                      <div className="rounded-md overflow-hidden shadow-md">
+                        <img src={project.img} width={300} height={100} alt="photo" />
+                      </div>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+            </Carousel>
+          </div>
         );
+      };
+    
+      return (
+        <Section>
+          <h2 className='text-3xl lg:text-4xl font-bold'>Some achievements.. </h2>
+          <p className="text-lg text-muted-foreground mt-2 lg:mt-4">This websites made thousands of visits and grew the business of my client.</p>
+          <ProjectCarousel projects={projects} />
+        </Section>
+      );
     };
 
-    return (
-        <Section>
-            <h2 className='text-3xl lg:text-4xl font-bold'>Some achievements.. </h2>
-            <p className="text-lg text-muted-foreground mt-2 lg:mt-4">This websites made thousands of visits and grew the business of my client.</p>
-            <ProjectCarousel projects={projects} />
-            <ProjectCarousel projects={projectsSecond} />
-            <ProjectCarousel  projects={projectsThird} />
-        </Section>
-    );
-};

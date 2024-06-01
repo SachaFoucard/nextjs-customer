@@ -1,0 +1,7 @@
+{
+    "findUnusedExports": {
+      "include": [ "./src/**/*.d.ts", "src/**/*.svelte" ],
+      "exclude": [ "./src/**/*.stories.@(js|jsx|ts|tsx)" ]
+    }
+  }
+  

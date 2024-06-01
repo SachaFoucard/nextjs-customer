@@ -43,7 +43,7 @@ export default function Plans() {
     
 
     return (
-        <SectionPrice className='rounded-4xl mr-auto my-40 border-black w-full shadow-lg h-auto bg-#305348-800'>
+        <SectionPrice className='rounded-4xl mr-auto my-40 border-black w-full shadow-lg h-auto bg-#305348-800 '>
             <div>
                 <h3 className='text-center text-1xl md:text-2xl translate-x-2'>Pricing</h3>
                 <h4 className='text-white-800 bold text-3xl md:text-5xl text-center align-center max-w3 m-auto mt-10'>Pricing plans for teams of all sizes</h4>
@@ -52,7 +52,7 @@ export default function Plans() {
             <div className='flex-cols-1 md:flex md:py-10 lg:py-20 lg:max-w-4xl m-auto'>
                 {/* Rendering plan cards using map function */}
                 {plans.map((plan, index) => (
-                    <div key={index} className='left flex flex-col justify-between bg-white relative text-[#305348] space-y-1 p-10 leading-10 rounded-lg shadow-2xl my-5 py-7  w-80 m-auto'>
+                    <div key={index} className='left flex flex-col justify-between bg-white relative text-[#305348] space-y-1 p-10 leading-10 rounded-lg shadow-2xl my-5 py-7  w-80 m-auto '>
                         <h3 className='bold text-2xl	'>{plan.name}</h3>
                         <span className='space-y-0'>
                             <p className='text-1 font-light'>{plan.description}</p>
@@ -69,9 +69,6 @@ export default function Plans() {
                         </p>
                         <p className='font-light'>
                             <span className="inline-block mr-1">✔</span>{plan.choose}
-                        </p>
-                        <p className='font-light'>
-                            <span className="inline-block mr-1">✔</span>{plan.supportResponseTime}
                         </p>
                         <p className='font-light'>
                             <span className="inline-block mr-1">✔</span>{plan.supportResponseTime}
