@@ -4,76 +4,64 @@ import { useState } from "react";
 import Image from 'next/image'
 
 interface Project {
-    img: string | undefined 
+  img: string;
 }
 
+
 export const Work = () => {
-    const [projects, setProjects] = useState<Project[]>([
-        { img: '../public/clodio/clodio.png' },
-        { img: './clodio/clodio2.png' },
-        { img: './clodio/clodio3.png' },
-        { img: './clodio/clodio4.png' },
-        { img: './clodio/clodio5.png' },
-        { img: './clodio/clodio6.png' },
-        { img: './clodio/clodio7.png' },
-        { img: './clodio/clodio8.png' },
-        { img: './clodio/clodio9.png' },
+  const [projects, setProjects] = useState<Project[]>([
+    { img: 'https://img.freepik.com/free-psd/quality-pet-care-banner-web-template_23-2148789422.jpg?t=st=1717280775~exp=1717284375~hmac=d986c7bd5de65d3ad75f1e655e366fdbef68d9ad7bac42ab30c52fb8536be462&w=2000    ' },
+    { img: 'https://img.freepik.com/free-psd/quality-pet-care-banner-web-template_23-2148789422.jpg?t=st=1717280775~exp=1717284375~hmac=d986c7bd5de65d3ad75f1e655e366fdbef68d9ad7bac42ab30c52fb8536be462&w=2000    ' },
+    { img: 'https://img.freepik.com/free-psd/quality-pet-care-banner-web-template_23-2148789422.jpg?t=st=1717280775~exp=1717284375~hmac=d986c7bd5de65d3ad75f1e655e366fdbef68d9ad7bac42ab30c52fb8536be462&w=2000    ' },
+    { img: 'https://img.freepik.com/free-psd/quality-pet-care-banner-web-template_23-2148789422.jpg?t=st=1717280775~exp=1717284375~hmac=d986c7bd5de65d3ad75f1e655e366fdbef68d9ad7bac42ab30c52fb8536be462&w=2000    ' },
 
-    ]);
+  ]);
 
-    const [projectsSecond, setProjectsSecond] = useState<Project[]>([
-        { img: './commerce/commerce1.png' },
-        { img: './commerce/commerce2.png' },
-        { img: './commerce/commerce3.png' },
-        { img: './commerce/commerce4.png' },
-        { img: './commerce/commerce5.png' },
-        { img: './commerce/commerce6.png' },
-        { img: './commerce/commerce7.png' },
-        { img: './commerce/commerce8.png' },
-        { img: './commerce/commerce9.png' },
-        { img: './commerce/commerce10.png' },
+  const [projectsSecond, setProjectsSecond] = useState<Project[]>([
+    { img: 'https://img.freepik.com/premium-vector/website-banner-with-light-tone-gradient-shade-background_920775-980.jpg?w=2000    ' },
+    { img: 'https://img.freepik.com/premium-vector/website-banner-with-light-tone-gradient-shade-background_920775-980.jpg?w=2000    ' },
+    { img: 'https://img.freepik.com/premium-vector/website-banner-with-light-tone-gradient-shade-background_920775-980.jpg?w=2000    ' },
+    { img: 'https://img.freepik.com/premium-vector/website-banner-with-light-tone-gradient-shade-background_920775-980.jpg?w=2000    ' },
 
+  ]);
+  const [projectsThird, setProjectsThird] = useState<Project[]>([
+    { img: 'https://img.freepik.com/free-psd/flat-design-business-template_23-2150102362.jpg?t=st=1717280498~exp=1717284098~hmac=d09f1b67f29ccbd8e59163c4de2288657b165bf1cb83275ad615753a05f26c40&w=2000' },
+    { img: 'https://img.freepik.com/free-psd/flat-design-business-template_23-2150102362.jpg?t=st=1717280498~exp=1717284098~hmac=d09f1b67f29ccbd8e59163c4de2288657b165bf1cb83275ad615753a05f26c40&w=2000' },
+    { img: 'https://img.freepik.com/free-psd/flat-design-business-template_23-2150102362.jpg?t=st=1717280498~exp=1717284098~hmac=d09f1b67f29ccbd8e59163c4de2288657b165bf1cb83275ad615753a05f26c40&w=2000' },
+    { img: 'https://img.freepik.com/free-psd/flat-design-business-template_23-2150102362.jpg?t=st=1717280498~exp=1717284098~hmac=d09f1b67f29ccbd8e59163c4de2288657b165bf1cb83275ad615753a05f26c40&w=2000' },
 
-    ]);
+  ]);
 
-    const [projectsThird, setProjectsThird] = useState<Project[]>([
-        { img: './resto/resto1.png' },
-        { img: './resto/resto2.png' },
-        { img: './resto/resto3.png' },
-        { img: './resto/resto4.png' },
-        { img: './resto/resto5.png' },
-        { img: './resto/resto6.png' },
-        { img: './resto/resto7.png' },
-        { img: './resto/resto8.png' },
-   
-    ]);
+  const ProjectCarousel = ({ projects }: { projects: Project[] }) => {
+    return (
+      <div className="grid mt-4 lg:mt-6 gap-2 pt-10 lg:gap-4 ">
+        <Carousel>
+          <CarouselContent className="-m-1">
+            {projects.map((project: Project, index: number) => (
+              <CarouselItem key={index} className="pl-1 md:basis-1/2 lg:basis-1/3">
+                <div className="p-1">
+                  <div className="rounded-md overflow-hidden shadow-md">
+                    <Image src={project.img} width={300} height={300} alt="photo" />
+                  </div>
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+        </Carousel>
+      </div>
+    );
+  };
 
-    const ProjectCarousel = ({ projects }: { projects: Project[] }) => {
-        return (
-          <div className="grid mt-4 lg:mt-6 gap-2 pt-10 lg:gap-4 ">
-            <Carousel>
-              <CarouselContent className="-m-1">
-                {projects.map((project: Project, index: number) => (
-                  <CarouselItem key={index} className="pl-1 md:basis-1/2 lg:basis-1/3">
-                    <div className="p-1">
-                      <div className="rounded-md overflow-hidden shadow-md">
-                        <img src={project.img} width={300} height={100} alt="photo" />
-                      </div>
-                    </div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-            </Carousel>
-          </div>
-        );
-      };
-    
-      return (
-        <Section>
-          <h2 className='text-3xl lg:text-4xl font-bold'>Some achievements.. </h2>
-          <p className="text-lg text-muted-foreground mt-2 lg:mt-4">This websites made thousands of visits and grew the business of my client.</p>
-          <ProjectCarousel projects={projects} />
-        </Section>
-      );
-    };
+  return (
+    <Section>
+      <h2 className='text-3xl lg:text-4xl font-bold'>Some achievements.. </h2>
+      <p className="text-lg text-muted-foreground mt-2 lg:mt-4">This websites made thousands of visits and grew the business of my client.</p>
+      <ProjectCarousel projects={projectsThird} />
+      <ProjectCarousel projects={projects} />
+      <ProjectCarousel projects={projectsSecond} />
+
+      
+    </Section>
+  );
+};
 

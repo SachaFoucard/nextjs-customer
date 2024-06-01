@@ -10,8 +10,7 @@ const MDP_NODEMAILER = process.env.MDP_NODEMAILER;
 if (!MONGODB_URI || !MAIL_NODEMAILER || !MDP_NODEMAILER) {
     throw new Error('Please define all the required environment variables in .env.local');
 }
-
-export const transporter = nodemailer.createTransport({
+ const transporter = nodemailer.createTransport({
     port: 587,
     service: 'gmail', // true for 465, false for other ports
     auth: {

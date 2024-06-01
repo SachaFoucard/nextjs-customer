@@ -14,8 +14,14 @@ interface IMarquee {
   grade: number;
   img: string
 }
+interface StarProps {
+  width: number;
+  height: number;
+  fill: string;
+}
 
-const nbrsStars = (StarComponent: React.ComponentType, grade: number, size: number,fill: string) => {
+
+const nbrsStars = (StarComponent: React.FC<any>, grade: number, size: number,fill: string) => {
   return (
     <>
       {Array.from({ length: grade }).map((_, index) => (
@@ -99,7 +105,7 @@ export default function ClientSideMarquee() {
 
   return (
     <>
-    <h2 className="text-center pb-5 text-sm md:text-2xl">"Customer happiness" is the cornerstone of my success</h2>
+    <h2 className="text-center pb-5 text-sm md:text-2xl">Customer happiness is the cornerstone of my success</h2>
       <div className=" flex flex-col items-center justify-center overflow-hidden rounded-lg border bg-background  md:shadow-xl">
         <Marquee pauseOnHover className="[--duration:20s] ">
           {firstRow.map((review) => (
