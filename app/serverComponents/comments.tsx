@@ -1,5 +1,5 @@
 import { GetServerSideProps } from "next";
-import Marquee from "../../components/ui/marquee";
+import Marquee from "../components/ui/marquee";
 
 interface HomePageProps {
   items: string[];
