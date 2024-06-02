@@ -30,7 +30,6 @@ export default function Home() {
         <Send />
       </div>
       <Work />
-      <Showcase />
       <Plans />
       <Comments />
       <Footer />
