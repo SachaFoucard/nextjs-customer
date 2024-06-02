@@ -5,7 +5,6 @@
 import Comments from "./_landing/Comments";
 import { Footer } from "./_landing/Footer";
 import Hero from "./_landing/Hero";
-import { Showcase } from "./_landing/Showcase";
 import { Work } from "./_landing/Work";
 import Plans from './_landing/Plans';
 import Send from "./_landing/SendForm";
