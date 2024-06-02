@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning className="h-full">
-      <link rel="icon" href="./logo.png" sizes="any" />
+        <link rel="icon" href="/logo.png" sizes="any" />
       <body className={cn(inter.className, "h-full")}>
         <NavBar />
         {children}
