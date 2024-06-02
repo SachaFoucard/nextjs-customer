@@ -1,7 +1,7 @@
 // ClientSideMarquee.tsx
 'use client'
 import { Component, useEffect, useState } from "react";
-import Marquee from "../components/ui/marquee";
+import {Marquee} from "../components/ui/marquee";
 import { Avatar, AvatarImage } from "@radix-ui/react-avatar";
 import { Star } from 'lucide-react';
 import { cn } from "../lib/utils";
