@@ -81,9 +81,7 @@ const Send = () => {
   return (
     <motion.div
       whileHover={{ scale: 1.05, boxShadow: '0 10px 20px rgba(0, 0, 0, 0.5)' }}
-      className="z-10 p-4 rounded-2xl shadow-lg bg-gray-800 border border-gray-700 m-auto"
-      style={{ minWidth: '300px' }}
-    >
+      className="z-10 p-4 rounded-2xl shadow-lg bg-gray-800 border border-gray-700 m-auto"    >
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 text-white ">
           <h1 className="text-center text-lg font-bold">Contact me</h1>
